@@ -1,0 +1,16 @@
+﻿@using Kyrsuch.Domain.Entities
+@model IEnumerable<Products>
+
+@{
+    ViewBag.Title = "Товари";
+}
+
+@foreach(var p in Model)
+{
+    <div>
+        <h3>@p.Name</h3>
+        <p>@p.Description</p>
+        <h4>@p.Price.ToString("# грн")</h4>
+    </div>
+}
+
