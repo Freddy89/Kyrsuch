@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Kyrsuch.Domain.Concrete
 {
-    class EFDbContext :DbContext
+    public class EFDbContext :DbContext
     {
-        public DbSet<Products> products { get; set; }
+        public DbSet<Products> Products { get; set; }
     }
 }

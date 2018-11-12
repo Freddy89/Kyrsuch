@@ -10,7 +10,7 @@ namespace Kyrsuch.Domain.Concrete
 
         public IEnumerable<Products> Products
         {
-            get { return context.products; }
+            get { return context.Products; }
         }
     }
 }
