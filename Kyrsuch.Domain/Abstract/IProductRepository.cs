@@ -9,6 +9,7 @@ namespace Kyrsuch.Domain.Abstract
 {
     public interface IProductRepository
     {
-            IEnumerable<Products> Products { get; }
+        IEnumerable<Products> Products { get; }
+        void SaveProduct(Products product);
     }
 }

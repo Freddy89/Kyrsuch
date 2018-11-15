@@ -12,5 +12,23 @@ namespace Kyrsuch.Domain.Concrete
         {
             get { return context.Products; }
         }
+
+        public void SaveProduct(Products product)
+        {
+            if (product.Id == 0)
+                context.Products.Add(product);
+            else
+            {
+                Products dbEntry = context.Products.Find(product.Id);
+                if (dbEntry != null)
+                {
+                    dbEntry.Name = product.Name;
+                    dbEntry.Description = product.Description;
+                    dbEntry.Price = product.Price;
+                    dbEntry.Category = product.Category;
+                }
+            }
+            context.SaveChanges();
+        }
     }
 }
